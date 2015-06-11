@@ -1,0 +1,31 @@
+<head>
+	<title>Crowd</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<template name="home">
+	{{> top}}
+</template>
+
+<template name="top">
+	<div class="header-bar">
+		<nav class="navigation">
+			...
+		</nav>
+		<div class="brand">
+			<div class="logo">Crowd</div>
+		</div>
+		<div class="location">
+			Home
+		</div>
+		<div class="settings">
+
+			<div class="currentUser">
+				{{#if currentUser}}
+				{{currentUser.profile.name}}
+				{{/if}}
+			</div>
+			<a href="logout">Settings</a>
+		</div>
+	</div>
+</template>

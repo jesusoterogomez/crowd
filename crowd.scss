@@ -1,0 +1,99 @@
+@import 'styles/reset';
+
+$color-0: #FFFFFF; // White
+$color-1: #13A0D7; // Deep Sky Blue
+$color-2: #79B8E2; // Light Sky Blue
+$color-3: #39B54A; // Forest Green
+$color-4: #003663; // St Tropaz
+
+//Sizing
+$default-font-size: 12pt;
+$margin-center: 0 auto;
+$form-width: 460px;
+$input-padding: 1em;
+$default-spacing: 1em;
+$br: 2px;
+$bold: 700;
+$header-offset: 50px;
+$header-height: $header-offset;
+
+
+//Templates
+%default-input{
+	outline: 0;
+	border: none;
+	border-radius: $br;
+	box-sizing:border-box;
+	padding: $input-padding;
+}
+
+%default-button{
+	@extend %default-input;
+	background: #ccc;
+}
+
+%accept-button{
+	@extend %default-button;
+	background: $color-3;
+	color: $color-0;
+	font-weight: $bold;
+	text-transform: uppercase;
+}
+// Base
+body {
+	position: relative;
+	font-size: $default-font-size;
+	background: $color-1;
+}
+
+// Header Bar
+.header-bar{
+	width:100%;
+	position: relative;
+	top: 0;
+	box-sizing:border-box;
+	padding: 0 $default-spacing;
+	display: block;
+	height: $header-height;
+	line-height: $header-height;
+	background: $color-2;
+	> * {
+		display: inline-block;
+	}
+	.settings {
+		position: absolute;
+		right: $default-spacing;
+		width: 200px;
+		text-align: right;
+	}
+}
+
+
+// Forms
+.login-form, .register-form {
+	width: 90%;
+	text-align: center;
+	max-width: $form-width;
+	margin: $margin-center;
+	position: relative;
+
+	::-webkit-input-placeholder {
+		color: $color-0;
+		opacity: 0.5;
+	}
+
+	input, textarea {
+		@extend %default-input;
+		background: $color-2;
+		color: $color-0;
+		display:block;
+		width: 100%;
+		margin: $default-spacing 0;
+	}
+	button{
+		@extend %accept-button;
+		display:block;
+		width: 100%;
+		margin: $default-spacing 0;
+	}
+}

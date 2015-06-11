@@ -1,0 +1,30 @@
+<template name="login">
+	<head>
+	<title>This is Crowd</title>
+	</head>
+
+	<body>
+		<h1>Crowd </h1>
+		<form class="login-form">
+			{{> emailLogin}}
+			<!-- {{> facebookLogin}} -->
+
+			{{> createAccountLink}}
+		</form>
+	</body>	
+</template>
+
+<template name="emailLogin">
+	<input type="email"  placeholder="User Name" id="login-email" required>
+	<input type="password" placeholder="Password" id="login-password" required>
+	<button id="login-button">Log In With Email</button>
+</template>
+
+<template name="facebookLogin">
+	<button>Sign Up with Facebook</button>
+</template>
+
+<template name="createAccountLink">
+	<p>- OR -</p>
+	<a href="/register">Create an Account</a>
+</template>

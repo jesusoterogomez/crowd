@@ -1,0 +1,20 @@
+<template name="register">
+	<form class="register-form">
+		{{> registerUser}}
+	</form>
+</template>
+
+
+<template name="registerUser">
+	<input id="register-name" type="text" name="name" placeholder="What's your name?">
+	
+	<input id="register-email" type="email" name="email" placeholder="Enter your email">
+
+	<input id="register-password" type="password" name="password" placeholder="Enter your password">
+
+	<button id="register-button">
+		Register
+	</button>
+
+	<a href="/login">Already have an account?. Log In</a>
+</template>

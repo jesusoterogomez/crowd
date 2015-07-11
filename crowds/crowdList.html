@@ -1,0 +1,20 @@
+<template name="list">
+	<div class="crowd-list">
+		<!-- action bar -->
+		{{> actions}}
+
+		{{#each crowd}}
+		<div>{{> entry}}</div>
+		{{/each}}
+	</div>
+</template>
+
+<template name="entry">
+	<div>{{name}}</div>
+</template>
+
+<template name="actions">
+	<div class="actions">
+		<button class="create-crowd">Create New</button>
+	</div>
+</template>
